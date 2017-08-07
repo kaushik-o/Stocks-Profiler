@@ -1,5 +1,5 @@
 {
-  "name": "Stock Profiler",
+  "name": "Stocks-Profiler",
   "version": "1.0.0",
   "description": "An SPA that gives risk metrics for stock tickers",
   "main": "server.js",
