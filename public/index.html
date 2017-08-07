@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="stocksProfilerApp">
+    <head>
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="modules/home/home.css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse" role="navigation">
+			<div class="navbar-header">
+                <a class="navbar-brand" ui-sref="home" style="font-size: 24px; padding: 15px;">Stocks Profiler</a>
+			</div>
+		</nav>
+        <div class="container">
+
+            <div ui-view></div>
+
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js"></script>
+        <script src="app.js"></script>
+        <script src="modules/home/home.ctrl.js"></script>
+        <script src="services/stock-quotes.service.js"></script>
+    </body>    
+</html>
+

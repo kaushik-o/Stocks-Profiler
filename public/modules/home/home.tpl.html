@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col-xs-6">
+		<input ng-model="ticker" ng-keyup="tickerEntered($event)" class="ticker-input"/> 
+        <button type="button" class="btn btn-primary add-button" ng-click="addButtonClicked()" ng-disabled="loading || isFieldBlank">
+            <span ng-hide="loading">ADD</span>
+            <span ng-show="loading"><i class="fa fa-spinner fa-spin"></i> Loading</span>
+        </button>
+	</div>
+	<div class="col-xs-6">
+		<div class="form-group stock-exchange-select">
+			<div class="select-container">
+                <select id="company" class="form-control" ng-model="exchange" ng-init="exchange='WIKI'">
+                    <option ng-repeat="exch in exchanges" value="{{exch.value}}">{{exch.label}}</option>
+				</select> 
+			</div>
+            <label class="control-label exchange-label" for="company">Exchange</label>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12 alert alert-danger" role="alert" ng-show="error">
+  		<span class="glyphicon glyphicon-exclamation-sign"></span>
+        {{errorMsg}}
+	</div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <table class="stocks-table">
+            <tr class="table-header">
+                <th>Ticker</h1>
+                <th>Description</th>
+                <th>Risk 1</th>
+                <th>Risk 2</th>
+                <th></th>
+            </tr>    
+            <tr ng-repeat = "stock in stocks">
+                <td>{{stock.ticker}}</td>
+                <td>{{stock.description}}</td>
+                <td>{{stock.variance}}</td>
+                <td>{{stock.risk2}}</td>
+                <td class="stock-delete" ng-click="stockDeleteClicked($index)"><span class="glyphicon glyphicon-trash"></span></td>
+            </tr>    
+        </table>    
+    </div>
+</div>    

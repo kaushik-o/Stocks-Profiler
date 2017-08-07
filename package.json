@@ -1,0 +1,16 @@
+{
+  "name": "Stock Profiler",
+  "version": "1.0.0",
+  "description": "An SPA that gives risk metrics for stock tickers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kaushik Owary",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  }
+}
